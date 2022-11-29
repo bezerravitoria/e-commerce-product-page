@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("fonts/KumbhSans-VariableFont_wght.ttf");
+}
+
+html {
+    font-family: "Kumbh Sans";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.header-inner {
+    margin: auto;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px solid hsl(223, 64%, 98%);
+}
+
+.tabs {
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    color: hsl(219, 9%, 45%);
+}
+
+.cart {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.avatar img {
+    height: 50px;
+}

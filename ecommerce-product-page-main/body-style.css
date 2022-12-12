@@ -1,29 +1,50 @@
-@font-face {
-    font-family: "Kumbh Sans";
-    src: url("fonts/KumbhSans-VariableFont_wght.ttf");
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:wght@400,700&display=swap");
+
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
 }
 
-html {
-    font-family: "Kumbh Sans";
-}
 
 body {
     margin: 0;
     padding: 0;
 }
 
+
+/*DEFINE FONTS*/
+
+html {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.sneakercompany, .product-name, .price-after-discount, .discount, .normal-price, .quantity, .add-to-cart {
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 700;
+}
+/*-----------*/
+
+
+/*HEADER*/
+
 header {
     width: 100%;
-    height: 100px;
 }
 
 .header-inner {
-    margin: auto;
-    width: 1440px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+header, .header-inner {
     height: 100px;
-    border-bottom: 1px solid hsl(223, 64%, 98%);
 }
 
 .tabs {
@@ -31,7 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 380px;
-    color: hsl(219, 9%, 45%);
+    color: var(--Dark-grayish-blue);
 }
 
 .cart {
@@ -42,3 +63,146 @@ header {
 .avatar img {
     height: 50px;
 }
+/*-----------*/
+
+
+/*WIDTH 1440px*/
+
+.header-inner, .main {
+    width: 1440px;
+    margin: auto;
+}
+/*-----------*/
+
+
+/*PRODUCT*/
+.main {
+    padding: 85px;
+    display: flex;
+}
+
+.product-images {
+    padding-left: 75px;
+    padding-right: 127px;
+}
+
+.product-thumbnail{
+    margin-top: 30px;
+    height: 108px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-thumbnail img {
+    height: 80%;
+    border-radius: 10px;
+}
+
+.product-main-img {
+    height: 445px;
+    width: 445px;
+}
+
+.product-main-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text {
+    width: 450px;
+    padding-top: 40px;
+}
+
+.sneakercompany{
+    color: var(--Orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.product-name {
+    font-size: 2.8em;
+    color: var(--Very-dark-blue);
+    margin-top: 0;
+}
+
+.product-description {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.8;
+}
+
+.discount-box {
+    display: grid;
+    grid-template-columns: 120px 45px;
+}
+
+.price-after-discount {
+    color: var(--Very-dark-blue);
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.discount {
+    background-color: var(--Pale-orange);
+    color: var(--Orange);
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.normal-price {
+    color: var(--Grayish-blue);
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: line-through;
+}
+
+.purchase {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+
+.quantity {
+    background-color: var(--Light-grayish-blue);
+    padding: 17px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.add-to-cart {
+    background-color: var(--Orange);
+    box-shadow: 0px 20px 8px var(--Pale-orange);
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-right: 65px;
+    padding-left: 65px;
+    border-radius: 10px;
+    color: var(--White);
+    width: 150px;
+}
+
+.add-to-cart-inner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*-----------*/
+
+
+/*FOOTER*/
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/*-----------*/

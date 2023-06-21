@@ -1,44 +1,229 @@
-@font-face {
-    font-family: "Kumbh Sans";
-    src: url("fonts/KumbhSans-VariableFont_wght.ttf");
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:wght@400,700&display=swap");
+
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
 }
 
-html {
-    font-family: "Kumbh Sans";
-}
 
 body {
     margin: 0;
     padding: 0;
 }
 
-header {
-    width: 100%;
-    height: 100px;
+button {
+    cursor: pointer;
 }
 
-.header-inner {
+html {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+
+main {
+    max-width: 1200px;
     margin: auto;
-    width: 1440px;
-    display: flex;
-    align-items: center;
-    height: 100px;
-    border-bottom: 1px solid hsl(223, 64%, 98%);
+    padding: 85px;
+    display: grid;
+    grid: '. . ';
 }
 
-.tabs {
-    margin-left: 50px;
+.images {
+    max-width: 445px;
+}
+
+.product-big-image, .overlay-main-img {
+    max-height: 445px;
+    max-width: 445px;
+    border-radius: 15px;
+}
+
+.product-thumbnails, .overlay-thumbnails {
+    margin-top: 30px;
+    height: 108px;
     display: flex;
     justify-content: space-between;
-    width: 380px;
-    color: hsl(219, 9%, 45%);
 }
 
-.cart {
+.product-thumbnails img, .overlay-thumbnails img {
+    height: 80%;
+    border-radius: 10px;
+}
+
+
+.text {
+    max-width: 450px;
+    padding-top: 40px;
+}
+
+.sneakercompany{
+    color: var(--Orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.product-name {
+    font-size: 2.8em;
+    color: var(--Very-dark-blue);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.product-description {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.8;
+}
+
+.discount-box {
+    display: grid;
+    grid-template-columns: 120px 45px;
+}
+
+.price-after-discount {
+    color: var(--Very-dark-blue);
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 700;
+}
+
+.discount {
+    background-color: var(--Pale-orange);
+    color: var(--Orange);
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: 700;
+}
+
+.normal-price {
+    color: var(--Grayish-blue);
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.purchase {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.quantity {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+}
+
+.minus-button, .plus-button {
+    border: 0;
+    background-color: white;
+}
+
+#number-of-items {
+    margin: 0;
+}
+
+.add-to-cart {
+    background-color: var(--Orange);
+    box-shadow: 0px 20px 8px var(--Pale-orange);
+    border: 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-right: 65px;
+    padding-left: 65px;
+    border-radius: 10px;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    width: 260px;
+    justify-content: space-between;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+
+.add-to-cart:hover, .minus-button:hover, .plus-button:hover, .checkout:hover, .product-thumbnails img:hover, .overlay-thumbnails img:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+/*OVERLAY*/
+
+.overlay-background {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#closeBtn {
     margin-left: auto;
-    margin-right: 50px;
+    margin-bottom: 30px;
+    background: 0;
+    border: 0;
 }
 
-.avatar img {
-    height: 50px;
+#closeBtn img {
+    height: 20px;
 }
+
+.overlay-main {
+    position: relative;
+}
+
+.overlay-main button {
+    position: absolute;
+    top: 45%;
+    border: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+#previousBtn {
+    left: -25px;
+}
+
+#nextBtn {
+    right: -25px;
+}
+
+.active-true {
+    border: 2px solid var(--Orange);
+    opacity: 70%;
+}
+
+
+
+@media screen and (max-width: 1087px) {
+
+    main {
+        width: 100%;
+        padding: 0;
+    }
+
+}
+
